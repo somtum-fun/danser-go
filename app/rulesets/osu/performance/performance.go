@@ -8,6 +8,7 @@ import (
 	"github.com/wieku/danser-go/app/rulesets/osu/performance/pp250306"
 	"github.com/wieku/danser-go/app/rulesets/osu/performance/pp251020"
 	"github.com/wieku/danser-go/app/rulesets/osu/performance/pp260706"
+	"github.com/wieku/danser-go/app/rulesets/osu/performance/somtum"
 	"github.com/wieku/danser-go/app/settings"
 )
 
@@ -35,9 +36,12 @@ func initConstructors() {
 	case "251020":
 		diffCalcInit = pp251020.NewDifficultyCalculator
 		ppCalcInit = pp251020.NewPPCalculator
-	default:
+	case "latest":
 		diffCalcInit = pp260706.NewDifficultyCalculator
 		ppCalcInit = pp260706.NewPPCalculator
+	default: // "somtum": what the osu!somtum server pays, Relax and Autopilot included
+		diffCalcInit = somtum.NewDifficultyCalculator
+		ppCalcInit = somtum.NewPPCalculator
 	}
 }
 

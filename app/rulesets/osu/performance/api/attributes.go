@@ -39,6 +39,9 @@ type Attributes struct {
 	// 2026 stuff
 	Reading                   float64
 	ReadingDifficultNoteCount float64
+
+	// Source is calculator-specific state for its pp calculator (osu!somtum: the parsed map).
+	Source any
 }
 
 // StrainPeaks contains peaks of Aim, Speed and Flashlight skills, as well as peaks passed through star rating formula

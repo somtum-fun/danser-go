@@ -18,6 +18,7 @@ require (
 	github.com/nattawitc/rich-go v0.0.0-20200402133947-4fcadd738f5b
 	github.com/olekukonko/tablewriter v1.1.5
 	github.com/shirou/gopsutil/v4 v4.26.9
+	github.com/somtum-fun/somtum-pp/go v0.1.0
 	github.com/spf13/cast v1.10.0
 	github.com/sqweek/dialog v0.0.0-20220504154117-be45b268883a
 	github.com/wieku/rplpa v1.0.2
@@ -51,6 +52,7 @@ require (
 	github.com/oliamb/cutter v0.2.2 // indirect
 	github.com/power-devops/perfstat v0.0.0-20260805114148-88456608a4f6 // indirect
 	github.com/rodrigocfd/windigo v0.0.0-20221212040622-0d5f23c1b18a // indirect
+	github.com/tetratelabs/wazero v1.12.0 // indirect
 	github.com/tklauser/go-sysconf v0.4.0 // indirect
 	github.com/tklauser/numcpus v0.12.0 // indirect
 	github.com/yusufpapurcu/wmi v1.2.4 // indirect
