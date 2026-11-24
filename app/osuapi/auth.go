@@ -44,8 +44,8 @@ func prepareConfig() {
 	if clientConfig == nil {
 		clientConfig = &oauth2.Config{
 			Endpoint: oauth2.Endpoint{
-				AuthURL:   "https://osu.ppy.sh/oauth/authorize",
-				TokenURL:  "https://osu.ppy.sh/oauth/token",
+				AuthURL:   settings.OsuWebURL() + "/oauth/authorize",
+				TokenURL:  settings.OsuWebURL() + "/oauth/token",
 				AuthStyle: oauth2.AuthStyleInParams,
 			},
 			Scopes: []string{"public", "identify"},

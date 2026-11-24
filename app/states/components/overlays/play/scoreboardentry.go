@@ -20,7 +20,6 @@ import (
 	"net/http"
 	"os"
 	"path/filepath"
-	"strconv"
 	"strings"
 )
 
@@ -191,7 +190,7 @@ func (entry *ScoreboardEntry) loadAvatar(pixmap *texture.Pixmap) {
 }
 
 func (entry *ScoreboardEntry) LoadAvatarID(id int) {
-	entry.LoadAvatarURL("https://a.ppy.sh/" + strconv.Itoa(id))
+	entry.LoadAvatarURL(settings.OsuAvatarURL(id))
 }
 
 func (entry *ScoreboardEntry) LoadAvatarURL(url string) {

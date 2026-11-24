@@ -1,3 +1,10 @@
+> **osu!somtum fork.** danser-go for [osu!somtum](https://somtum.fun):
+> - new default pp version **somtum**: star rating and pp from [somtum-pp](https://github.com/somtum-fun/somtum-pp),
+>   the pp the somtum server pays, with **Relax** (akatsuki osu_2019) and **Autopilot** pp. The ppy versions stay
+>   selectable (`Gameplay.PPVersion`);
+> - the osu! server is a setting (`Credentials.Server`): `somtum.fun` by default, `blueskychan.dev` (somtum dev) or
+>   `ppy.sh`. The API, OAuth, avatars and beatmap links follow it; create the API client on that server.
+
 <p align="center">
   <img width="500px" src="assets/textures/coinbig.png"/>
 </p>

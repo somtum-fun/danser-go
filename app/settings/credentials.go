@@ -10,15 +10,21 @@ import (
 	"log"
 	"os"
 	"path/filepath"
+	"strconv"
 	"time"
 )
 
 var Credentails = &credentials{
+	Server:       "somtum.fun",
 	AuthType:     "ClientCredentials",
 	CallbackPort: 8294,
 }
 
 type credentials struct {
+	// osu! server whose API, avatars and beatmap pages are used: "somtum.fun" (osu!somtum),
+	// "blueskychan.dev" (osu!somtum dev) or "ppy.sh". Hosts are osu.<server> and a.<server>.
+	Server string `label:"osu! server" combo:"somtum.fun|osu!somtum,blueskychan.dev|osu!somtum (dev),ppy.sh|osu! (ppy)"`
+
 	ClientId     string
 	ClientSecret string `long:"true" password:"true"`
 
@@ -90,3 +96,17 @@ func SaveCredentials(forceSave bool) {
 		}
 	}
 }
+
+// OsuServer is the configured server's domain ("somtum.fun" when unset).
+func OsuServer() string {
+	if Credentails.Server == "" {
+		return "somtum.fun"
+	}
+	return Credentails.Server
+}
+
+// OsuWebURL is the server's website, e.g. https://osu.somtum.fun.
+func OsuWebURL() string { return "https://osu." + OsuServer() }
+
+// OsuAvatarURL is a user's avatar on the server.
+func OsuAvatarURL(userID int) string { return "https://a." + OsuServer() + "/" + strconv.Itoa(userID) }

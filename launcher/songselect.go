@@ -328,7 +328,7 @@ func (m *songSelectPopup) drawSongSelect() {
 
 					imgui.AlignTextToFramePadding()
 					if imgui.ButtonV("\uF7A2##"+rId, vec2(imgui.FrameHeight()*2, imgui.FrameHeight()*2)) {
-						platform.OpenURL(fmt.Sprintf("https://osu.ppy.sh/s/%d", b.bMaps[0].SetID))
+						platform.OpenURL(fmt.Sprintf("%s/s/%d", settings.OsuWebURL(), b.bMaps[0].SetID))
 					}
 
 					if s {
@@ -343,7 +343,7 @@ func (m *songSelectPopup) drawSongSelect() {
 						if s {
 							imgui.TextUnformatted("Not available")
 						} else {
-							imgui.TextUnformatted(fmt.Sprintf("https://osu.ppy.sh/s/%d", b.bMaps[0].SetID))
+							imgui.TextUnformatted(fmt.Sprintf("%s/s/%d", settings.OsuWebURL(), b.bMaps[0].SetID))
 						}
 
 						imgui.EndTooltip()

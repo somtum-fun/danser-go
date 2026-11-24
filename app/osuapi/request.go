@@ -5,9 +5,9 @@ import (
 	"errors"
 	"golang.org/x/oauth2"
 	"net/http"
-)
 
-const osuEndpoint = "https://osu.ppy.sh/api/v2/"
+	"github.com/wieku/danser-go/app/settings"
+)
 
 func makeRequest(reqString string) (res *http.Response, err error) {
 	src, err := getTokenSource()
@@ -16,7 +16,7 @@ func makeRequest(reqString string) (res *http.Response, err error) {
 		return nil, err
 	}
 
-	res, err = oauth2.NewClient(context.Background(), src).Get(osuEndpoint + reqString)
+	res, err = oauth2.NewClient(context.Background(), src).Get(settings.OsuWebURL() + "/api/v2/" + reqString)
 
 	if err != nil {
 		return nil, err
