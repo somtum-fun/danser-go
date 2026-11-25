@@ -39,7 +39,7 @@ func initConstructors() {
 	case "latest":
 		diffCalcInit = pp260706.NewDifficultyCalculator
 		ppCalcInit = pp260706.NewPPCalculator
-	default: // "somtum": what the osu!somtum server pays, Relax and Autopilot included
+	default: // "somtum": what the somtum.fun server pays, Relax and Autopilot included
 		diffCalcInit = somtum.NewDifficultyCalculator
 		ppCalcInit = somtum.NewPPCalculator
 	}

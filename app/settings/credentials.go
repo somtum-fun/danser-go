@@ -21,9 +21,9 @@ var Credentails = &credentials{
 }
 
 type credentials struct {
-	// osu! server whose API, avatars and beatmap pages are used: "somtum.fun" (osu!somtum),
-	// "blueskychan.dev" (osu!somtum dev) or "ppy.sh". Hosts are osu.<server> and a.<server>.
-	Server string `label:"osu! server" combo:"somtum.fun|osu!somtum,blueskychan.dev|osu!somtum (dev),ppy.sh|osu! (ppy)"`
+	// osu! server whose API, avatars and beatmap pages are used: "somtum.fun" (somtum.fun),
+	// "blueskychan.dev" (somtum.fun dev) or "ppy.sh". Hosts are osu.<server> and a.<server>.
+	Server string `label:"osu! server" combo:"somtum.fun|somtum.fun,blueskychan.dev|somtum.fun (dev),ppy.sh|osu! (ppy)"`
 
 	ClientId     string
 	ClientSecret string `long:"true" password:"true"`

@@ -1,4 +1,4 @@
-> **osu!somtum fork.** danser-go for [osu!somtum](https://somtum.fun):
+> **somtum.fun fork.** danser-go for [somtum.fun](https://somtum.fun):
 > - new default pp version **somtum**: star rating and pp from [somtum-pp](https://github.com/somtum-fun/somtum-pp),
 >   the pp the somtum server pays, with **Relax** (akatsuki osu_2019) and **Autopilot** pp. The ppy versions stay
 >   selectable (`Gameplay.PPVersion`);

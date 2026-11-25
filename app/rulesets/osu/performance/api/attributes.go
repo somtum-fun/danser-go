@@ -40,7 +40,7 @@ type Attributes struct {
 	Reading                   float64
 	ReadingDifficultNoteCount float64
 
-	// Source is calculator-specific state for its pp calculator (osu!somtum: the parsed map).
+	// Source is calculator-specific state for its pp calculator (somtum.fun: the parsed map).
 	Source any
 }
 

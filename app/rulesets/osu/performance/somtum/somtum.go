@@ -1,5 +1,5 @@
 // Package somtum is the "somtum" pp version: star rating and pp from somtum-pp, the pp the
-// osu!somtum server pays. Vanilla plays get ppy's current pp; Relax gets akatsuki-pp-rs's
+// somtum.fun server pays. Vanilla plays get ppy's current pp; Relax gets akatsuki-pp-rs's
 // osu_2019 and Autopilot akatsuki-pp-rs's calculator, as on the server.
 package somtum
 
@@ -139,7 +139,7 @@ func (*DifficultyCalculator) CalculateStrainPeaks(bMap *beatmap.BeatMap, diff *d
 func (*DifficultyCalculator) GetVersion() int { return Version }
 
 func (*DifficultyCalculator) GetVersionMessage() string {
-	return "osu!somtum (" + somtumpp.Version() + ")"
+	return "somtum.fun (" + somtumpp.Version() + ")"
 }
 
 type PPCalculator struct{}
